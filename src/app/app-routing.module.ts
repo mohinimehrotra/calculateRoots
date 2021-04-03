@@ -9,6 +9,10 @@ const routes: Routes = [{
   component : RegularfalsiComponent
 },
 {
+  path : '**',
+  redirectTo : 'regularfalsi'
+},
+{
   path : 'bisection',
   component : BisectionComponent
 },
