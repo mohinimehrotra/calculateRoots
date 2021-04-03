@@ -8,10 +8,7 @@ const routes: Routes = [{
   path : 'regularfalsi',
   component : RegularfalsiComponent
 },
-{
-  path : '**',
-  redirectTo : 'regularfalsi'
-},
+
 {
   path : 'bisection',
   component : BisectionComponent
@@ -19,6 +16,10 @@ const routes: Routes = [{
 {
   path : 'secant',
   component : SecantComponent
+},
+{
+  path : '**',
+  redirectTo : 'regularfalsi'
 }];
 
 @NgModule({
