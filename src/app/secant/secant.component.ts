@@ -45,7 +45,6 @@ export class SecantComponent implements OnInit {
            m = (a*this.f(b) - b* this.f(a))/(this.f(b) - this.f(a));
            i++;
        }   
-    alert(this.userForm.value);
     this.root = m;
     console.log(this.userForm.value);
     console.log(this.list);
