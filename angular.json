@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "calculateRoot"
+  "defaultProject": "findRoots"
 }
