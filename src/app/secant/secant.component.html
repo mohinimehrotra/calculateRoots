@@ -1,0 +1,49 @@
+<div class="container">
+    <legend>Secant Method</legend>
+    <form [formGroup]="userForm" (submit)="saveUser()">
+        <div class="col-md-3">
+            <label for="a">Enter a</label>
+            <input formControlName="a" id="a"/>
+          
+        </div>
+        <div class="col-md-3">
+            <label for="b">Enter b</label>
+            <input formControlName="b" id="b"/>
+        </div>
+        <div class="col-md-3">
+            <label for="func">Enter f(x)</label>
+            <input formControlName="func" id="func"/>
+           
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary" [disabled]="!userForm.valid">Submit</button>
+        </div>
+    </form>
+    <div class = "col-md-8">
+        <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th scope="col">i</th>
+                <th scope="col">a</th>
+                <th scope="col">b</th>
+                <th scope="col">m</th>
+                <th scope="col">f(m)</th>
+                <th scope="col">f(a)*f(m)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let eachRegFalsi of list;index as i;">
+                <th scope="row">i</th>
+                <td>{{eachRegFalsi.a}}</td>
+                <td>{{eachRegFalsi.b}}</td>
+                <td>{{eachRegFalsi.m}}</td>
+                <td>{{eachRegFalsi.f_m}}</td>
+                <td>{{eachRegFalsi.f_a_m}}</td>
+              </tr>
+              <tr>
+               Root = {{root}}
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
